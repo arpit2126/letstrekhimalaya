@@ -17,7 +17,107 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Camping in Himalayas,Camping, Tent, River Rafting, Cycling, Biking, Mountain" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
-<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!--  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+	<script>
+		jQuery(document).ready(function() {
+	function close_accordion_section() {
+		jQuery('.accordion .accordion-section-title').removeClass('active');
+		jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+	}
+
+	jQuery('.accordion-section-title').click(function(e) {
+		// Grab current anchor value
+		var currentAttrValue = jQuery(this).attr('href');
+
+		if(jQuery(e.target).is('.active')) {
+			close_accordion_section();
+		}else {
+			close_accordion_section();
+
+			// Add active class to section title
+			jQuery(this).addClass('active');
+			// Open up the hidden content panel
+			jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open'); 
+		}
+
+		e.preventDefault();
+	});
+        });
+	</script>
+	<script type="text/javascript" src="../assets/js/analytics.js"></script>
+
+<style>
+body {
+	position:relative;
+	z-index:0;
+}
+.main:before {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:-1;
+	content:'';
+	background:-webkit-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-moz-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:-o-radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+	background:radial-gradient(30%, rgba(255,255,255,0.15), rgba(0,0,0,0)), url('img/body-bg.png');
+}
+
+.site-header-wrap {
+	margin-bottom:60px;
+	border-bottom:1px solid #cd9ad6;
+}
+
+/*------------------------------------*\
+-------- DEMO Code: accordion
+\*------------------------------------*/
+/*----- Accordion -----*/
+.accordion, .accordion * {
+	-webkit-box-sizing:border-box; 
+	-moz-box-sizing:border-box; 
+	box-sizing:border-box;
+}
+
+.accordion {
+	overflow:hidden;
+	box-shadow:0px 1px 3px rgba(0,0,0,0.25);
+	border-radius:3px;
+	background:#f7f7f7;
+}
+
+/*----- Section Titles -----*/
+.accordion-section-title {
+	width:100%;
+	padding:15px;
+	display:inline-block;
+	border-bottom:1px solid #1a1a1a;
+	background:#333;
+	transition:all linear 0.15s;
+	/* Type */
+	font-size:1.200em;
+	text-shadow:0px 1px 0px #1a1a1a;
+	color:#fff;
+}
+
+.accordion-section-title.active, .accordion-section-title:hover {
+	background:#4c4c4c;
+	/* Type */
+	text-decoration:none;
+}
+
+.accordion-section:last-child .accordion-section-title {
+	border-bottom:none;
+}
+
+/*----- Section Content -----*/
+.accordion-section-content {
+	padding:15px;
+	display:none;
+}
+</style>
 <link rel="stylesheet" href="css/swipebox.css">
  <!------ Light Box ------>
     <script src="js/jquery.swipebox.min.js"></script> 
@@ -93,7 +193,7 @@ Camping in Himalayas,Camping, Tent, River Rafting, Cycling, Biking, Mountain" />
 <!-- about -->
 	<div class="main">
 		<div class="container">
-		<h2>Events</h2>
+		<h2>Prashar Lake - the holy trek...</h2>
 		<!-- portfolio-section -->
 	 <div class="portfolio"  id="portfolio">
 	 <div class="welcome-top">
@@ -101,82 +201,59 @@ Camping in Himalayas,Camping, Tent, River Rafting, Cycling, Biking, Mountain" />
 					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper grid_box">
 							<div class="welcome-1">
-								<p>KheerGanga Trek</p>	
-								<a href="images/img5.jpg" class="swipebox"  title="Image Title"> <img src="images/img5.jpg" class="img-responsive" alt=""><span class="zoom-icon">KheerGanga Trek</span> </a>
-							</div>
-						</div>
-		            </div>		
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div >
-							<div class="welcome-1">	
-								<a href="prasharlake.html" title="Prashar Lake">
-									<p>Prashar Trek</p>
-								 	<img src="images/img2.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span>
-								  </a>
+								<a href="images/img5.jpg" class="swipebox"  title="Prashar Lake"> <img src="images/img5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
 							</div>
 						 </div>
-					</div>					
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">
-								<p>Sar Pass Trek</p>	
-								<a href="images/img3.jpg" class="swipebox"  title="Image Title"> <img src="images/img3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>				
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">
-							<p>Spiti Valley Expedition</p>	
-								<a href="images/img3.jpg" class="swipebox"  title="Image Title"> <img src="images/img3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>					
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">	
-								<p>Chadar Trek</p>
-								<a href="images/img5.jpg" class="swipebox"  title="Image Title"> <img src="images/img5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>						
-				<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">
-							<p>Tungnath Trek</p>	
-								<a href="images/img2.jpg" class="swipebox"  title="Image Title"> <img src="images/img2.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>										
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">
-							<p>Chandrakhani Pass Trek</p>	
-								<a href="images/img2.jpg" class="swipebox"  title="Image Title"> <img src="images/img2.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>					
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">
-							<p>Stok Kangri Trek</p>	
-								<a href="images/img3.jpg" class="swipebox"  title="Image Title"> <img src="images/img3.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>						
-					<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper grid_box">
-							<div class="welcome-1">
-							<p>Valley of Flowers Trek</p>	
-								<a href="images/img5.jpg" class="swipebox"  title="Image Title"> <img src="images/img5.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-							</div>
-						 </div>
-					</div>										
-					<div class="clearfix"></div>					
+					</div>
+					
+				</div>
 				
-					<div class="clearfix"></div>
-    </div>
+			</div>
+	</div>	
+	
+	<div>HEY</div>						
 	</div>
+	
+</div>
+		<div class="accordion">
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-1">Overview</a>
+					<div id="accordion-1" class="accordion-section-content">
+						<p>    Overview   </p>
+						<ul>
+								<li class='active'>Total Duration – 1 Nights / 2 Days</li>
+								<li>Maximum Altitude – 2620 m.</li>
+								<li>Grade – Moderate.</li>
+								<li >Best Season – December to April</li>
+								<li>Accommodation – Hotel/Guesthouse; Organized Campsite</li>
+								<li>Food – On trek – All meals included</li>
+								<li>Distance – 15 KM.</li>
+								<li>Things to Pack: </strong>Rucksack, cotton clothes, good trekking shoes, a warm jacket, Gloves, warmer, woolen or monkey cap covering head and ears, UV rays protected sunglasses, raincoat, extra socks, water bottle, torch, cold cream, sunscreen, toilet soap, towel, Walking Stick medicines that you usually use</li>
+						</ul>
+					</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-2">Itinerary</a>
+					<div id="accordion-2" class="accordion-section-content">
+						<p><h3>Trek Schedule :</h3></p>
+						<p><strong>Day 1 : </strong>Arrive at Bhunter (Kullu) by 8.00 am and arrive Baghi at 10 am. Start trek to Parashar Lake. The total trek length is 9 KM and it will take 4-5 hrs to reach Prashar Lake. After reaching delicious snacks will be serverd with hot Tea. Sun set will provide a magical view. Overnight stay in camp.
+						<br>
+						<br>	
+						<strong>Day 2 : </strong> Explore Parashar. At the left side slope from the summit one can get a terrific view of the Himalayan ranges namely Dhuladhar range, Pir Punjal ranges, Shivalik etc.and after healty breakfast trek back to Baghi(7.5 K.m.).And then return back to Kullu</p>
+					</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+			<div class="accordion-section">
+				<a class="accordion-section-title" href="#accordion-3">Details</a>
+					<div id="accordion-3" class="accordion-section-content">
+						<p>Prashar Lake lies 49 km north of Mandi, Himachal Pradesh, India, with a three storied pagoda-like temple dedicated to the sage Prashar. The lake is located at a height of 2730 m above sea level. With deep blue waters, the lake is held sacred to the sage Prashar and he is regarded to have meditated there. Surrounded by snow-capped peaks and looking down on the fast flowing river Beas, the lake can be approached via Drang.
+
+						The temple was built in the thirteenth century and legend has it was built by a baby from a single tree. The lake has a floating island in it and it is said to be unclear how deep it is, with a diver not being able to determine its depth</p>
+					</div><!--end .accordion-section-content-->
+			</div><!--end .accordion-section-->
+		</div><!--end .accordion-->
+		<div class="clearfix"></div>					
+		<div class="clearfix"></div>
+    
 	  <!-- Script for gallery Here -->
 				<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 					<script type="text/javascript">
@@ -225,9 +302,7 @@ Camping in Himalayas,Camping, Tent, River Rafting, Cycling, Biking, Mountain" />
 					</script>
 <!-- portfolio-section  -->
 
-		</div>
-	</div>
-</div>
+	
 <!-- about -->
 <!-- footer -->
 	<div class="footer">
